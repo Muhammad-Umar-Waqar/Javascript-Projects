@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm and Birthdate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <h1>Current Time</h1>
+            <div id="clock">00:00:00</div>
+            <button id="setAlarmButton">Set Alarm</button>
+        </div>
+
+        <div id="notificationBox" class="notification-box">
+            <div class="notification-content">
+                <span id="notificationText"></span>
+                <button id="cancelAlarm" class="cancel-button">Cancel</button>
+            </div>
+        </div>
+
+        <div class="alarm-container">
+            <h1>Alarm</h1>
+            <div class="alarm-box" id="AlarmBox">
+                <div class="close-button" id="closeCard">&times;</div>
+                <form id="AlarmForm">
+                    <label for="birthdate">Set Alarm (HH:MM:SS):</label>
+                    <input type="text" id="Alarm_Input" name="birthdate" placeholder="HH:MM:SS" required>
+                    <div class="button-container">
+                        <button type="submit" id="submitBirthdateButton">Submit</button>
+                        <button type="button" id="Cancel_Alarm_Btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div id="alarm_result" class="result"></div>
+        </div>
+    </div>
+
+    <audio id="alarmSound" src="alarm.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
